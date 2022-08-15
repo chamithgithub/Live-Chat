@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="SignUpCon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.87" prefHeight="560.0" prefWidth="382.0" style="-fx-background-color: #0652DD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <ImageView fx:id="btnBack" fitHeight="38.0" fitWidth="44.0" layoutX="19.0" layoutY="22.0" onMousePressed="#handleMouseEvent" opacity="0.48" pickOnBounds="true" preserveRatio="true" styleClass="btnBack">
+         <image>
+            <Image url="@../icons/go_back.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="regPass" layoutX="59.0" layoutY="154.0" prefHeight="35.0" prefWidth="292.0" promptText="Password" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="regFirstName" layoutX="59.0" layoutY="60.0" prefHeight="35.0" prefWidth="292.0" promptText="Full Name" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="regEmail" layoutX="59.0" layoutY="199.0" prefHeight="34.0" prefWidth="292.0" promptText="Email" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </TextField>
+      <Label layoutX="10.0" layoutY="14.0" text="Sign Up" textFill="#c9c7c7">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="76.0" layoutY="404.0" mnemonicParsing="false" onAction="#registration" prefHeight="39.0" prefWidth="273.0" style="-fx-background-radius: 10; -fx-background-color: #dfe4ea;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Create Account" textFill="#004c40">
+         <font>
+            <Font name="Beirut Regular" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="54.0" layoutY="507.0" text="Already Have an Account?" textFill="#dad7d7">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="getStarted" layoutX="257.0" layoutY="517.0" mnemonicParsing="false" onAction="#LogInHereAction" prefHeight="20.0" prefWidth="98.0" style="-fx-background-color: #dfe4ea; -fx-background-radius: 10;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Log In Here" textFill="#004c40">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="controlRegLabel" layoutX="54.0" layoutY="359.0" opacity="0.0" text="Please, Enter all the necessary Info" textFill="#f44336">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="success" layoutX="101.0" layoutY="443.0" opacity="0.0" text="Registration Successful" textFill="#6abf69">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="goBack" layoutX="97.0" layoutY="470.0" opacity="0.0" text="Please, go back and login!" textFill="#6abf69">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="regName" layoutX="59.0" layoutY="107.0" prefHeight="35.0" prefWidth="292.0" promptText="Username" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="male" layoutX="174.0" layoutY="297.0" mnemonicParsing="false" selected="true" text="Male" textFill="#ebe8e8">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="173.0" layoutY="333.0" mnemonicParsing="false" text="Female" textFill="#ebe8e8" toggleGroup="$Gender">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="58.0" layoutY="307.0" text="Gender:" textFill="#ebeaea">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameExists" layoutX="83.0" layoutY="359.0" opacity="0.0" text="Username already exists!" textFill="#f44336">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="checkEmail" layoutX="89.0" layoutY="359.0" opacity="0.0" text="E-mail is already registered!" textFill="#f44336">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="regPhoneNo" layoutX="59.0" layoutY="245.0" prefHeight="35.0" prefWidth="292.0" promptText="Phone Number" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

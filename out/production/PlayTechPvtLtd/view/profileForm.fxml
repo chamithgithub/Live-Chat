@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="profile" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="profile" prefHeight="448.0" prefWidth="335.0" style="-fx-background-color: #263238;">
+         <children>
+            <Label layoutX="9.0" layoutY="93.0" text="Full Name: " textFill="#e1dfdf">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="133.0" text="E-mail:" textFill="#eee5e5">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="173.0" text="Phone No:" textFill="#ebe7e7">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="205.0" prefHeight="34.0" prefWidth="74.0" text="Gender:" textFill="#e4e4e4">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="fullName" layoutX="129.0" layoutY="93.0" opacity="0.0" textFill="#f2f2f2" wrapText="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="email" layoutX="129.0" layoutY="133.0" opacity="0.0" textFill="#f2f2f2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="phoneNo" layoutX="129.0" layoutY="174.0" textFill="#f2f2f2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="gender" layoutX="129.0" layoutY="212.0" textFill="#f2f2f2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="proImage" fitHeight="84.0" fitWidth="83.0" layoutX="227.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="7.0" layoutY="250.0" text="Change Profile Picture:" textFill="#f8f5f5">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fileChoosePath" editable="false" layoutX="9.0" layoutY="285.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #455a64;" styleClass="textField" stylesheets="@../Css/style.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#chooseImageButton" prefHeight="26.0" prefWidth="77.0" styleClass="allButton" stylesheets="@../Css/style.css" text="Choose">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@../Css/style.css" text="Save">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

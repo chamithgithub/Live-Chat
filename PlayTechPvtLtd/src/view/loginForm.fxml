@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="261.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane fx:id="logCon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.87" prefHeight="560.0" prefWidth="382.0" style="-fx-background-color: #0652DD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
-      <JFXTextField fx:id="userTxt" layoutX="222.0" layoutY="134.0" prefHeight="25.0" prefWidth="196.0" promptText="User Name" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/user.png" />
-         </image>
-      </ImageView>
-      <JFXButton layoutX="222.0" layoutY="183.0" onAction="#loginBtnAction" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #0984e3;" text="Login" />
-      <Separator layoutX="207.0" layoutY="81.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="3.0" />
-      <Label layoutX="24.0" layoutY="28.0" prefHeight="37.0" prefWidth="196.0" text="Live Chat" textFill="#2b1283">
+      <TextField fx:id="userName" layoutX="79.0" layoutY="228.0" prefHeight="34.0" prefWidth="274.0" promptText="Username" style="-fx-background-color: #dfe4ea; -fx-focus-traversable: green;" styleClass="txtFont" stylesheets="@../Css/style.css">
          <font>
-            <Font name="Engravers MT" size="25.0" />
+            <Font name="Arial" size="17.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passWord" layoutX="78.0" layoutY="278.0" prefHeight="35.0" prefWidth="274.0" promptText="Password" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="78.0" layoutY="351.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="274.0" style="-fx-background-radius: 10; -fx-background-color: #dfe4ea;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Log In" textFill="#004c40">
+         <font>
+            <Font name="Beirut Regular" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="32.0" layoutY="461.0" text="Don't Have an Account?" textFill="#d7d7d7">
+         <font>
+            <Font size="19.0" />
          </font>
       </Label>
+      <Button fx:id="btnSignUp" layoutX="203.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #dfe4ea; -fx-background-radius: 10;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Sign Up Here" textFill="#004c40">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="32.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="34.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/secure.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="84.0" text="Log In" textFill="#d7d7d7">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginNotifier" layoutX="115.0" layoutY="326.0" opacity="0.0" text="Username or password is incorrect" textFill="#ff5353">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="146.0" fitWidth="163.0" layoutX="122.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/user.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
