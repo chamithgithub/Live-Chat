@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="SignUpCon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.87" prefHeight="560.0" prefWidth="382.0" style="-fx-background-color: #0652DD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<AnchorPane fx:id="SignUpCon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.87" prefHeight="560.0" prefWidth="382.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
-      <ImageView fx:id="btnBack" fitHeight="38.0" fitWidth="44.0" layoutX="19.0" layoutY="22.0" onMousePressed="#handleMouseEvent" opacity="0.48" pickOnBounds="true" preserveRatio="true" styleClass="btnBack">
+      <ImageView fx:id="btnBack" fitHeight="38.0" fitWidth="44.0" layoutX="330.0" layoutY="15.0" onMousePressed="#handleMouseEvent" opacity="0.48" pickOnBounds="true" preserveRatio="true" styleClass="btnBack">
          <image>
-            <Image url="@../icons/go_back.png" />
+            <Image url="@icons/go_back.png" />
          </image>
       </ImageView>
       <PasswordField fx:id="regPass" layoutX="59.0" layoutY="154.0" prefHeight="35.0" prefWidth="292.0" promptText="Password" style="-fx-background-color: #dfe4ea;" styleClass="txtFont" stylesheets="@../Css/style.css">
@@ -33,7 +33,7 @@
             <Font name="Arial" size="17.0" />
          </font>
       </TextField>
-      <Label layoutX="10.0" layoutY="14.0" text="Sign Up" textFill="#c9c7c7">
+      <Label layoutX="14.0" layoutY="14.0" text="Sign Up" textFill="#c9c7c7">
          <font>
             <Font size="28.0" />
          </font>

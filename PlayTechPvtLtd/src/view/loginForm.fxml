@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="logCon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.87" prefHeight="560.0" prefWidth="382.0" style="-fx-background-color: #0652DD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<AnchorPane fx:id="logCon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.87" prefHeight="560.0" prefWidth="382.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <TextField fx:id="userName" layoutX="79.0" layoutY="228.0" prefHeight="34.0" prefWidth="274.0" promptText="Username" style="-fx-background-color: #dfe4ea; -fx-focus-traversable: green;" styleClass="txtFont" stylesheets="@../Css/style.css">
          <font>
@@ -38,7 +38,7 @@
       </Button>
       <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="32.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../icons/user.png" />
+            <Image url="@icons/user.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="34.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">

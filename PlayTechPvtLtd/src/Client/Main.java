@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../view/loginForm.fxml"));
-        primaryStage.setTitle("Messenger!");
+        primaryStage.setTitle("live Chat!");
         primaryStage.setScene(new Scene(root, 382, 560));
         primaryStage.setResizable(false);
         primaryStage.show();
