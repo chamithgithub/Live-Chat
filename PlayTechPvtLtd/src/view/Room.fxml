@@ -133,7 +133,7 @@
                               <Image url="@icons/icons8-sent.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="28.0" fitWidth="43.0" layoutX="297.0" layoutY="11.0" onMouseClicked="#handleSendEventMedia" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="28.0" fitWidth="43.0" layoutX="297.0" layoutY="11.0" onMouseClicked="#cameraIcon" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emoji/logo-camera-icon-png-favpng-tDX58dg37GLsKks51p3SCzeq0.jpg" />
                            </image>
@@ -145,7 +145,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <Circle fx:id="imgVl" fill="WHITE" layoutX="103.0" layoutY="97.0" radius="83.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fx:id="imgBx" fitHeight="185.0" fitWidth="225.0" layoutX="149.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
          </children>

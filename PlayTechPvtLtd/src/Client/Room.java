@@ -18,6 +18,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -68,6 +69,9 @@ public class Room extends Thread implements Initializable {
     public Pane imgFl;
     public Circle imgVl;
     public AnchorPane emojisPane;
+    public VBox vBox;
+    public Pane imgBox;
+    public ImageView imgBx;
     private FileChooser fileChooser;
     private File filePath;
     public boolean toggleChat = false, toggleProfile = false;
@@ -209,59 +213,63 @@ public class Room extends Thread implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         showProPic.setStroke(Color.valueOf("#90a4ae"));
         Image image;
-    /*    if(Controller.gender.equalsIgnoreCase("Male")) {
+        if(Controller.gender.equalsIgnoreCase("Male")) {
             image = new Image("icons/user.png", false);
         } else {
             image = new Image("icons/female.png", false);
             proImage.setImage(image);
-        }*/
-      //  showProPic.setFill(new ImagePattern(image));
+        }
+      //  showProPic.setFill(new ImagePattern(image));              yesterday
         clientName.setText(Controller.username);
         connectSocket();
 
         emojisPane.setVisible(false);
     }
 
-    public void handleSendEventMedia(MouseEvent mouseEvent) throws IOException {
-        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Image");
-        this.filePath = fileChooser.showOpenDialog(stage);
-       // fileChoosePath.setText(filePath.getPath());
-        BufferedImage bufferedImage = ImageIO.read(filePath);
-        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-      //  imgVl.setImage(image);
-        imgVl.setFill(new ImagePattern(image));
-    }
-
     public void smileyThree(MouseEvent mouseEvent) {
         msgField.appendText("\uD83D\uDE42");
+        emojisPane.setVisible(false);
     }
 
     public void smileyFour(MouseEvent mouseEvent) {
         msgField.appendText("\uD83D\uDE42");
+        emojisPane.setVisible(false);
     }
 
     public void smileyFive(MouseEvent mouseEvent) {
         msgField.appendText("\uD83D\uDE42");
+        emojisPane.setVisible(false);
     }
 
     public void smileyTwo(MouseEvent mouseEvent) {
         msgField.appendText("\uD83D\uDE42");
+        emojisPane.setVisible(false);
     }
 
     public void smileyOne(MouseEvent mouseEvent) {
         msgField.appendText("\uD83D\uDE42");
+        emojisPane.setVisible(false);
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
         emojisPane.setVisible(true);
+
+    }
+
+    public void cameraIcon(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image");
+        this.filePath = fileChooser.showOpenDialog(stage);
+        // fileChoosePath.setText(filePath.getPath());
+        BufferedImage bufferedImage = ImageIO.read(filePath);
+        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+        //  imgVl.setImage(image);
+       // imgBox.set(new ImagePattern(image));
+        //imgVl.setFill(new ImagePattern(image));
+        imgBx.setImage(image);
+        msgRoom.appendText("Me: "+ "\n");
+
     }
 }
-/*
-    Button Font color: #004c40
-    Button Background Color: #718792
-    All Button Hover Color: #819ca9
-    Body Color: #263238
-    Text field color:  #455a64
-    Header color: #102027*/
+
