@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../view/loginForm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Room.fxml"));
         primaryStage.setTitle("live Chat!");
         primaryStage.setScene(new Scene(root, 382, 560));
         primaryStage.setResizable(false);

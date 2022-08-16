@@ -160,7 +160,7 @@ public class Room extends Thread implements Initializable {
         String msg = msgField.getText();
         writer.println(Controller.username + ": " + msg);
         msgRoom.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
-        msgRoom.appendText("Me: " + msg + "\n");
+        msgRoom.appendText("Me: "+ msg + "\n");
         msgField.setText("");
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
             System.exit(0);
@@ -205,14 +205,34 @@ public class Room extends Thread implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         showProPic.setStroke(Color.valueOf("#90a4ae"));
         Image image;
-        if(Controller.gender.equalsIgnoreCase("Male")) {
+    /*    if(Controller.gender.equalsIgnoreCase("Male")) {
             image = new Image("icons/user.png", false);
         } else {
             image = new Image("icons/female.png", false);
             proImage.setImage(image);
-        }
-        showProPic.setFill(new ImagePattern(image));
+        }*/
+      //  showProPic.setFill(new ImagePattern(image));
         clientName.setText(Controller.username);
         connectSocket();
     }
+
+    public void handleSendEventMedia(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image");
+        this.filePath = fileChooser.showOpenDialog(stage);
+        fileChoosePath.setText(filePath.getPath());
+
+
+
+
+
+    }
 }
+/*
+    Button Font color: #004c40
+    Button Background Color: #718792
+    All Button Hover Color: #819ca9
+    Body Color: #263238
+    Text field color:  #455a64
+    Header color: #102027*/

@@ -1,3 +1,13 @@
+
+
+/*
+    Button Font color: #004c40
+    Button Background Color: #718792
+    All Button Hover Color: #819ca9
+    Body Color: #263238
+    Text field color:  #455a64
+    Header color: #102027*/
+
 .btnBack:hover {
     -fx-opacity: 1;
 }
@@ -13,7 +23,7 @@
 
 .allButton {
     -fx-background-color:  #718792;
-    -fx-background-radius: 90;
+    -fx-background-radius: 10;
 }
 
 .allButton:hover {
@@ -98,13 +108,4 @@
     -fx-font-family: Arial !important;
 }
 
-
-
-/*
-    Button Font color: #004c40
-    Button Background Color: #718792
-    All Button Hover Color: #819ca9
-    Body Color: #263238
-    Text field color:  #455a64
-    Header color: #102027*/
 

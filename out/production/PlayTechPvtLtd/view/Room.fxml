@@ -104,7 +104,7 @@
                               <Image url="@icons/icons8-sent.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="297.0" layoutY="9.0" onMouseClicked="#handleSendEvent" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="297.0" layoutY="9.0" onMouseClicked="#handleSendEventMedia" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@icons/video.PNG" />
                            </image>
