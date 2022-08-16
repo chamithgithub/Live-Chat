@@ -16,6 +16,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
@@ -64,6 +65,9 @@ public class Room extends Thread implements Initializable {
     public ImageView proImage;
     @FXML
     public Circle showProPic;
+    public Pane imgFl;
+    public Circle imgVl;
+    public AnchorPane emojisPane;
     private FileChooser fileChooser;
     private File filePath;
     public boolean toggleChat = false, toggleProfile = false;
@@ -214,19 +218,44 @@ public class Room extends Thread implements Initializable {
       //  showProPic.setFill(new ImagePattern(image));
         clientName.setText(Controller.username);
         connectSocket();
+
+        emojisPane.setVisible(false);
     }
 
-    public void handleSendEventMedia(MouseEvent mouseEvent) {
+    public void handleSendEventMedia(MouseEvent mouseEvent) throws IOException {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");
         this.filePath = fileChooser.showOpenDialog(stage);
-        fileChoosePath.setText(filePath.getPath());
+       // fileChoosePath.setText(filePath.getPath());
+        BufferedImage bufferedImage = ImageIO.read(filePath);
+        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+      //  imgVl.setImage(image);
+        imgVl.setFill(new ImagePattern(image));
+    }
 
+    public void smileyThree(MouseEvent mouseEvent) {
+        msgField.appendText("\uD83D\uDE42");
+    }
 
+    public void smileyFour(MouseEvent mouseEvent) {
+        msgField.appendText("\uD83D\uDE42");
+    }
 
+    public void smileyFive(MouseEvent mouseEvent) {
+        msgField.appendText("\uD83D\uDE42");
+    }
 
+    public void smileyTwo(MouseEvent mouseEvent) {
+        msgField.appendText("\uD83D\uDE42");
+    }
 
+    public void smileyOne(MouseEvent mouseEvent) {
+        msgField.appendText("\uD83D\uDE42");
+    }
+
+    public void emojiIcon(MouseEvent mouseEvent) {
+        emojisPane.setVisible(true);
     }
 }
 /*

@@ -92,9 +92,38 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </TextArea>
+                  <AnchorPane fx:id="emojisPane" layoutY="387.0" prefHeight="60.0" prefWidth="388.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="14.0" layoutY="13.0" onMouseClicked="#smileyOne" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@emoji/external-emoji-birthday-party-tulpahn-outline-color-tulpahn.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="61.0" layoutY="13.0" onMouseClicked="#smileyTwo" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@emoji/external-emoji-emoji-justicon-lineal-color-justicon-2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="109.0" layoutY="13.0" onMouseClicked="#smileyThree" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@emoji/external-emoji-emoji-justicon-lineal-color-justicon-3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="159.0" layoutY="13.0" onMouseClicked="#smileyFour" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@emoji/external-emoji-emoji-justicon-lineal-color-justicon-4.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="206.0" layoutY="13.0" onMouseClicked="#smileyFive" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@emoji/Twemoji_1f600.svg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                   <AnchorPane layoutY="447.0" prefHeight="51.0" prefWidth="388.0" style="-fx-background-color: #263238;">
                      <children>
-                        <TextField fx:id="msgField" layoutY="7.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="294.0" promptText="Write messages here...." styleClass="msgBox" stylesheets="@../Css/style.css">
+                        <TextField fx:id="msgField" layoutY="7.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="251.0" promptText="Write messages here...." styleClass="msgBox" stylesheets="@../Css/style.css">
                            <font>
                               <Font name="Arial" size="19.0" />
                            </font>
@@ -104,13 +133,19 @@
                               <Image url="@icons/icons8-sent.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="297.0" layoutY="9.0" onMouseClicked="#handleSendEventMedia" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="28.0" fitWidth="43.0" layoutX="297.0" layoutY="11.0" onMouseClicked="#handleSendEventMedia" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/video.PNG" />
+                              <Image url="@emoji/logo-camera-icon-png-favpng-tDX58dg37GLsKks51p3SCzeq0.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="251.0" layoutY="9.0" onMouseClicked="#emojiIcon" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@emoji/external-emoji-emoji-justicon-lineal-color-justicon-3.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
+                  <Circle fx:id="imgVl" fill="WHITE" layoutX="103.0" layoutY="97.0" radius="83.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </Pane>
          </children>
